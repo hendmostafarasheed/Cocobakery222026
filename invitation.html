@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#321707">
+<title>CoCo Bakery | Event Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="details-page">
+<main class="invite-shell details-shell">
+  <img class="artwork" src="details.png" alt="CoCo Bakery grand opening event details">
+  <div class="steam-layer" aria-hidden="true">
+    <span class="steam steam-one"></span><span class="steam steam-two"></span><span class="steam steam-three"></span>
+    <span class="steam steam-four"></span><span class="steam steam-five"></span>
+  </div>
+  <div class="live-countdown details-countdown" aria-label="Live countdown to opening">
+    <div><strong id="days">--</strong><small>DAYS</small></div>
+    <div><strong id="hours">--</strong><small>HOURS</small></div>
+    <div><strong id="minutes">--</strong><small>MINUTES</small></div>
+    <div><strong id="seconds">--</strong><small>SECONDS</small></div>
+  </div>
+  <button class="hotspot rsvp-hotspot" data-action="rsvp" aria-label="Confirm attendance"><span>TAKE ATTENDANCE</span></button>
+  <a class="hotspot location-hotspot" href="https://www.google.com/maps/search/?api=1&query=Dokki%2C+Giza%2C+Egypt" target="_blank" rel="noopener" aria-label="View location on Google Maps"><span>VIEW LOCATION</span></a>
+  <button class="hotspot special-hotspot" data-action="offers" aria-label="View special opening offers"><span>SPECIAL OPENING OFFERS</span></button>
+  <button class="hotspot offers-hotspot" data-action="offers" aria-label="View opening offers"><span>OPENING OFFERS</span></button>
+  <button class="hotspot photos-hotspot" data-action="photos" aria-label="View opening photos"><span>VIEW PHOTOS</span></button>
+  <button class="hotspot share-hotspot" data-action="share" aria-label="Share invitation"><span>SHARE INVITATION</span></button>
+</main>
+
+<div class="modal-backdrop" id="modal" hidden>
+  <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close dialog">×</button>
+    <h2 id="modal-title">CoCo Bakery</h2>
+    <div id="modal-content"></div>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

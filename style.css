@@ -1,0 +1,41 @@
+*{box-sizing:border-box}
+:root{--espresso:#321707;--brown:#603514;--gold:#d8a84d;--cream:#f7e6c5}
+html,body{margin:0;min-height:100%;background:#1d0d05;color:var(--cream);font-family:Georgia,"Times New Roman",serif}
+body{display:flex;justify-content:center;align-items:center;min-height:100vh;min-height:100svh;padding:12px}
+.invite-shell{position:relative;width:min(100%,680px,calc((100svh - 24px)*2/3));max-height:calc(100svh - 24px);aspect-ratio:2/3;overflow:hidden;background:#321707;box-shadow:0 16px 55px #0009;flex:0 1 auto}
+.artwork{display:block;width:100%;height:100%;object-fit:cover}
+.live-countdown{position:absolute;display:grid;grid-template-columns:repeat(4,1fr);gap:2.4%;left:27.5%;width:45%;height:5.8%;z-index:3;pointer-events:none;color:#ffe6b5;text-align:center}
+.live-countdown>div{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;background:linear-gradient(135deg,#51290f,#2d1307);border:1px solid #d9a744;border-radius:9%;box-shadow:0 2px 7px #0008,inset 0 0 0 1px #f3d28a55}
+.live-countdown strong{font-size:clamp(10px,2.6vw,23px);line-height:1.05;font-weight:normal}
+.live-countdown small{font-size:clamp(5px,.95vw,8px);letter-spacing:.07em;margin-top:2px}
+.cover-countdown{top:54.0%;left:27%;width:46%;height:6.8%;gap:2.5%}
+.details-countdown{top:35.6%;left:17%;width:66%;height:8.1%;gap:2%}
+.details-countdown strong{font-size:clamp(11px,3vw,26px)}
+.details-countdown small{font-size:clamp(5px,1vw,9px)}
+.hotspot{position:absolute;z-index:5;display:flex;align-items:center;justify-content:center;text-align:center;border:0;background:transparent;color:transparent;text-decoration:none;cursor:pointer;overflow:hidden}
+.hotspot:focus-visible{outline:3px solid #ffda83;outline-offset:-4px;border-radius:16px}
+.hotspot span{font-size:clamp(7px,1.4vw,12px);font-weight:bold;letter-spacing:.03em}
+.open-hotspot{left:27%;top:62.6%;width:46%;height:7.2%;border-radius:40px}
+.open-hotspot span{color:#43230d}
+.rsvp-hotspot{left:28%;top:66.5%;width:44%;height:5.2%;border-radius:36px}
+.location-hotspot{left:10%;top:73.8%;width:29%;height:5.3%;border-radius:18px}
+.special-hotspot{left:40%;top:73.8%;width:26%;height:5.3%;border-radius:18px}
+.offers-hotspot{left:67%;top:73.8%;width:24%;height:5.3%;border-radius:18px}
+.photos-hotspot{left:20%;top:80.6%;width:30%;height:5.3%;border-radius:18px}
+.share-hotspot{left:51%;top:80.6%;width:31%;height:5.3%;border-radius:18px}
+.steam-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.steam{position:absolute;bottom:10%;width:5%;height:13%;border-radius:50%;opacity:0;background:linear-gradient(90deg,transparent,#fff6d7aa 48%,transparent);filter:blur(7px);animation:steamRise 5.8s ease-in-out infinite}
+.steam-one{left:22%;animation-delay:0s}.steam-two{left:29%;height:16%;animation-delay:1.3s}.steam-three{left:38%;height:11%;animation-delay:2.4s}.steam-four{right:23%;height:15%;animation-delay:1.8s}.steam-five{right:32%;height:10%;animation-delay:3.1s}
+@keyframes steamRise{0%{transform:translateY(15%) scale(.65) rotate(-8deg);opacity:0}20%{opacity:.45}65%{opacity:.18}100%{transform:translateY(-240%) scale(1.9) rotate(12deg);opacity:0}}
+.modal-backdrop{position:fixed;inset:0;z-index:20;background:#130801d9;display:flex;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop[hidden]{display:none}
+.modal-card{position:relative;width:min(100%,430px);max-height:90vh;overflow:auto;padding:28px 24px;background:linear-gradient(145deg,#fff0d0,#e8c88e);color:#44240e;border:2px solid #b88636;border-radius:18px;box-shadow:0 20px 70px #000a}
+.modal-card h2{margin:0 28px 12px 0;font-size:26px}
+.modal-card p{line-height:1.55}
+.modal-close{position:absolute;right:12px;top:8px;border:0;background:transparent;color:#44240e;font-size:30px;cursor:pointer}
+.modal-card label{display:block;margin:12px 0 5px;font-weight:bold}
+.modal-card input,.modal-card select{width:100%;padding:11px;border:1px solid #b88b4d;border-radius:8px;background:#fffaf0;color:#321707;font-size:16px}
+.modal-action{margin-top:16px;padding:12px 18px;border:1px solid #e8c575;border-radius:28px;background:#48230d;color:#ffedc9;font-size:15px;cursor:pointer}
+.note{font-size:13px;opacity:.82}
+@media(max-width:480px){body{padding:12px}.invite-shell{width:min(100%,calc((100svh - 24px)*2/3));box-shadow:none}.live-countdown strong{font-size:clamp(10px,3vw,15px)}.live-countdown small{font-size:clamp(5px,1.4vw,7px)}.details-countdown{left:17%;width:66%}.hotspot span{font-size:clamp(6px,1.55vw,9px)}}
+@media(prefers-reduced-motion:reduce){.steam{animation:none;display:none}}
